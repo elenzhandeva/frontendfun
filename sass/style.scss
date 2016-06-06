@@ -103,9 +103,9 @@ a {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  transition: height 3s;
+  transition: height 1s;
 
-  background-color: lightgreen;
+  background-color: rgba(242,230,255,0.5);
 
   // @media only screen and (max-width: 450px){
   //   display: none;
@@ -119,44 +119,47 @@ a {
   li {
     display: block;
     border-bottom: 1px solid white;
-    background-color: $purple-1;
+    //background-color: $purple-1;
+    background-color: rgba(242,230,255,0.5);
   }
 
   a {
     display: block;
-    background-color: $purple-1;
+    //background-color: $purple-1;
+    background-color: rgba(242, 230, 255, 0.5);
     color: black;
     padding: 9px;
     &:hover {
-      background-color: darken($purple-1, 10%);
+      background-color: rgba(203, 153, 169, 0.8);
       color: white;
     }
   }
 
   @media only screen and (min-width: 451px) {
     transition: none;
-    height: 30px;
-    background-color: darkgreen;
+    height: 45px;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 0;
 
     ul {
       height: 30px;
-      margin-top: 5px;
+      margin-top: 14px;
       text-align: left;
+      background-color: transparent;
     }
 
     li {
       display: inline;
-      border: 1px solid black;
+      background-color: transparent;
     }
 
     a {
       display: inline;
-      background-color: $purple-1;
+      // background-color: $purple-1;
+      background-color: transparent;
       padding: 10px;
       &:hover {
-        background-color: darken($purple-1, 10%);
+        background-color:  rgba(203, 153, 169, 0.8);
         color: white;
       }
     }
@@ -164,7 +167,7 @@ a {
 }
 
 .nav-bar-show{
-  height: 300px;
+  height: 145px;    //SUPER HACKY :/
   background-color: inherit;
   overflow: hidden;
   position: absolute;
@@ -213,7 +216,7 @@ content {
 
 
 
-.banner {
+.hero-banner {
   display: block;
   width: 100%;
   height: 500px;
@@ -232,6 +235,40 @@ content {
 }
 
 
+.hero-text {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: 45%;
+  height: auto;
+  border: white solid 1px;
+  clear: both;
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight: 400;
+    color: white;
+    display: inline;
+    position: relative;
+    float: left;
+  }
+
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    font-weight: 400;
+    color: white;
+    display: inline;
+    position: relative;
+    float: right;
+  }
+
+  @media only screen and (min-width: 451px){
+    width: 205px;
+  }
+
+}
 
 
 footer {

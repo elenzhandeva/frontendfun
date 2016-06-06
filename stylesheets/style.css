@@ -174,8 +174,8 @@ a {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  transition: height 3s;
-  background-color: lightgreen;
+  transition: height 1s;
+  background-color: rgba(242, 230, 255, 0.5);
 }
 /* line 114, ../sass/style.scss */
 .nav-bar ul {
@@ -186,56 +186,56 @@ a {
 .nav-bar li {
   display: block;
   border-bottom: 1px solid white;
-  background-color: #e5ccff;
+  background-color: rgba(242, 230, 255, 0.5);
 }
-/* line 125, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .nav-bar a {
   display: block;
-  background-color: #e5ccff;
+  background-color: rgba(242, 230, 255, 0.5);
   color: black;
   padding: 9px;
 }
-/* line 130, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .nav-bar a:hover {
-  background-color: #cb99ff;
+  background-color: rgba(203, 153, 169, 0.8);
   color: white;
 }
 @media only screen and (min-width: 451px) {
   /* line 95, ../sass/style.scss */
   .nav-bar {
     transition: none;
-    height: 30px;
-    background-color: darkgreen;
+    height: 45px;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 0;
   }
-  /* line 143, ../sass/style.scss */
+  /* line 144, ../sass/style.scss */
   .nav-bar ul {
     height: 30px;
-    margin-top: 5px;
+    margin-top: 14px;
     text-align: left;
+    background-color: transparent;
   }
-  /* line 149, ../sass/style.scss */
+  /* line 151, ../sass/style.scss */
   .nav-bar li {
     display: inline;
-    border: 1px solid black;
+    background-color: transparent;
   }
-  /* line 154, ../sass/style.scss */
+  /* line 156, ../sass/style.scss */
   .nav-bar a {
     display: inline;
-    background-color: #e5ccff;
+    background-color: transparent;
     padding: 10px;
   }
-  /* line 158, ../sass/style.scss */
+  /* line 161, ../sass/style.scss */
   .nav-bar a:hover {
-    background-color: #cb99ff;
+    background-color: rgba(203, 153, 169, 0.8);
     color: white;
   }
 }
 
-/* line 166, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .nav-bar-show {
-  height: 300px;
+  height: 145px;
   background-color: inherit;
   overflow: hidden;
   position: absolute;
@@ -271,7 +271,7 @@ a {
     }
   }
 }*/
-/* line 204, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 content {
   display: block;
   clear: both;
@@ -279,8 +279,8 @@ content {
   margin: 10px auto auto auto;
 }
 
-/* line 216, ../sass/style.scss */
-.banner {
+/* line 219, ../sass/style.scss */
+.hero-banner {
   display: block;
   width: 100%;
   height: 500px;
@@ -289,24 +289,61 @@ content {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 226, ../sass/style.scss */
-.banner img {
+/* line 229, ../sass/style.scss */
+.hero-banner img {
   width: inherit;
   height: inherit;
   position: center center;
 }
 
-/* line 237, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
+.hero-text {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: 45%;
+  height: auto;
+  border: white solid 1px;
+  clear: both;
+}
+/* line 247, ../sass/style.scss */
+.hero-text h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  font-weight: 400;
+  color: white;
+  display: inline;
+  position: relative;
+  float: left;
+}
+/* line 257, ../sass/style.scss */
+.hero-text h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  font-weight: 400;
+  color: white;
+  display: inline;
+  position: relative;
+  float: right;
+}
+@media only screen and (min-width: 451px) {
+  /* line 238, ../sass/style.scss */
+  .hero-text {
+    width: 205px;
+  }
+}
+
+/* line 274, ../sass/style.scss */
 footer {
   background-color: lightblue;
   margin-top: 25px;
 }
 
-/* line 244, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 .contact-info ul {
   padding: 10px;
 }
-/* line 247, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .contact-info li {
   font-weight: bold;
   text-align: center;
