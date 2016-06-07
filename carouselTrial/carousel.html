@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		var imgIndex = 0;
+		function carousel(n){
+			console.log("INDEX: "+imgIndex);
+			if (imgIndex < -3){
+				console.log("<0");
+			}
+			else if (imgIndex >0){
+				console.log(">4");
+			}
+			else { imgIndex += n;}
+			var posn = (imgIndex)*52;
+			console.log(posn);
+			var strposn = posn+"px";
+			console.log(strposn);
+			//document.getElementsByClassName("wrapper")[0].css("position-x", -100px);
+			$(".wrapper").css("left", strposn );
+		}
+
+	</script>
+</head>
+
+
+
+
+
+
+<body>
+
+<div class="slide">
+  <div class="wrapper">
+    <ul>
+      <li><div id="A" class="box"></div></li>
+      <li><div id="B" class="box"></div></li>
+      <li><div id="C" class="box"></div></li>
+      <li><div id="D" class="box"></div></li>
+      <li><div id="E" class="box"></div></li>
+    </ul>
+
+
+  </div>
+
+<div class="carousel-nav">
+	<button id="prev" onclick="carousel(1)"> < </button>
+	<button id="next" onclick="carousel(-1)"> > </button>
+</div>
+</div>
+
+</body>
+</html>
