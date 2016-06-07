@@ -11,14 +11,16 @@
 		var imgIndex = 0;
 		function carousel(n){
 			console.log("INDEX: "+imgIndex);
-			if (imgIndex < -3){
+			if (imgIndex < 0){
 				console.log("<0");
 			}
-			else if (imgIndex >0){
-				console.log(">4");
+			else if (imgIndex >3){
+				console.log(">3");
 			}
-			else { imgIndex += n;}
-			var posn = (imgIndex)*52;
+			
+
+			imgIndex += n;
+			var posn = (imgIndex)*-52;
 			console.log(posn);
 			var strposn = posn+"px";
 			console.log(strposn);
@@ -50,8 +52,8 @@
   </div>
 
 <div class="carousel-nav">
-	<button id="prev" onclick="carousel(1)"> < </button>
-	<button id="next" onclick="carousel(-1)"> > </button>
+	<button id="prev" onclick="carousel(-1)"> < </button>
+	<button id="next" onclick="carousel(1)"> > </button>
 </div>
 </div>
 
