@@ -1,0 +1,78 @@
+ul {
+  display: inline;
+  list-style: none;
+ 
+}
+li {
+  display: inline;
+  position: absolute;
+}
+
+.wrapper {
+  height: 150px;
+  width: 10000px;       //super hacky
+  margin: 5px 0 5px 0;
+  padding: 5px 0 5px 0;
+  position: absolute;
+}
+
+.slide {
+  width: 152px;
+  height: 200px;
+  //overflow: hidden;
+  position: absolute;
+  left:200px;
+  border: 1px solid red;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  position: relative;
+  transition: left 1s;
+
+  position: absolute;
+  left: 112px;
+}
+
+.right {
+  position: absolute;
+  left: 112px;
+}
+
+.show {
+  position: absolute;
+  left: -40px;
+}
+
+.left {
+  position: absolute;
+  left: -192px;
+}
+
+.carousel-nav {
+  background: grey;
+  clear: both;
+  //display: inline;
+  position: relative;
+  top: 170px;
+}
+
+#prev {
+  float: left;
+}
+#next {
+  float: right;
+}
+
+
+#A { background-color: red;}
+#B { background-color: blue;}
+#C { background-color: green;}
+#D { background-color: yellow;}
+#E { background-color: orange;}
+
+
+
+
