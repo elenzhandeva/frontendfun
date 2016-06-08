@@ -24,9 +24,7 @@
 			console.log('showing Nav');
 			document.getElementsByClassName("nav-bar")[0].classList.toggle("nav-bar-show");
 		}
-	</script>
 
-	<script>
 		$(document).ready(function(){
 			$(".nav-click").click(function(){
 				//$("#nav-bar ul").hide();
@@ -39,44 +37,37 @@
 		// 	$(this).toggleClass('shift');
 		// });
 
-	</script>
-
-	<script type="text/javascript">
-	//load images into an array-------------
-		var slideImages = new Array();
-		slideImages[0] = new Image();
-		slideImages[1] = new Image();
-		slideImages[2] = new Image();
-		slideImages[3] = new Image();
-		slideImages[4] = new Image();
-		
-		slideImages[0].src = "images/herobgimg.jpg";
-		slideImages[1].src = "images/pic1.jpeg";
-		slideImages[2].src = "images/pic2.jpeg";
-		slideImages[3].src = "images/pic3.jpeg";
-		slideImages[4].src = "images/pic4.jpeg";
-	//---------------------------------------
-		
-		var slideIndex = 1;
-
-		/* slideImage(n): slides panel of pictures in direction n
-			where n = -1 => left, n = 1 => right
-			sets new image src to panels
-		*/
-
-		function slideImage(n){
-			if (!document.images){ return; }	//if images not supported
-			console.log(slideIndex);
 
 
+		var imgIndex = 0;
+		var imgArray = document.getElementsByClassName("box");
+		var imgNum = imgArray.length;
 
-			document.getElementById('imageA').src = slideImages[slideIndex].src;
-			if (slideIndex<4){ slideIndex += 1; }
-			else { slideIndex = 0; }
-			//setTimeout("slideImage()", 2500);
+		function shiftCarousel(n){
+			if (n > 0){ imgIndex = imgIndex>=4 ? 0 : imgIndex+1; }
+			else { imgIndex = imgIndex<=0 ? 4 : imgIndex-1; }
+
+			console.log(imgIndex);
+
+			if (document.getElementsByClassName("show").length > 0){
+				$(".show").css("z-index","1");
+				document.getElementsByClassName("show")[0].classList.remove("show");
+			}
+			if (document.getElementsByClassName("left").length > 0){
+				$(".left").css("z-index",(-1*n)+"");
+				document.getElementsByClassName("left")[0].classList.remove("left");
+			}
+			if (document.getElementsByClassName("right").length > 0){
+				$(".right").css("z-index",(1*n)+"");
+				document.getElementsByClassName("right")[0].classList.remove("right");
+			}
+			imgArray[imgIndex].classList.add("show");
+			imgArray[(imgIndex<=0 ? 4 : imgIndex-1)].classList.add("left");
+			imgArray[(imgIndex>=4 ? 0 : imgIndex+1)].classList.add("right");
+
 		}
-	</script>
 
+	</script>
 </head>
 
 
@@ -136,15 +127,25 @@
 
 		"Up!" she screeched. Harry heard her walking toward the kitchen and then the sound of the frying pan being put on the stove. He rolled onto his back and tried to remember the dream he had been having. It had been a good one. There had been a flying motorcycle in it. He had a funny feeling he'd had the same dream before. </p>
 	</content>
+
+
 	<div class="carousel">
-		<div class="carousel-wrapper" onclick="slideImage()">
+		<div class="carousel-wrapper">
 			<ul>
-			<li><img src="images/herobgimg.jpg" id="imageA"></li>
-			<li><img src="images/herobgimg.jpg" id="imageB"></li>
-			<li><img src="images/herobgimg.jpg" id="imageC"></li>
+				<li><img class="box show" src="images/herobgimg.jpg"></li>
+				<li><img class="box right" src="images/pic1.jpeg"></li>
+				<li><img class="box" src="images/pic2.jpeg"></li>
+				<li><img class="box" src="images/pic3.jpeg"></li>
+				<li><img class="box left" src="images/pic4.jpeg"></li>
 			</ul>
 		</div>
+		<div class="carousel-nav">
+			<button id="prev-button" onclick="shiftCarousel(-1)"> < </button>
+			<button id="next-button" onclick="shiftCarousel(1)"> > </button>
+		</div>
 	</div>
+
+
 	<content class="work">
 		<br>
 		<p>Nearly ten years had passed since the Dursleys had woken up to find their nephew on the front step, but Privet Drive had hardly changed at all. The sun rose on the same tidy front gardens and lit up the brass number four on the Dursleys' front door; it crept into their living room, which was almost exactly the same as it had been on the night when Mr. Dursley had seen that fateful news report about the owls. Only the photographs on the mantelpiece really showed how much time had passed. Ten years ago, there had been lots of pictures of what looked like a large pink beach ball wearing different-colored bonnets - but Dudley Dursley was no longer a baby, and now the photographs showed a large blond boy riding his first bicycle, on a carousel at the fair, playing a computer game with his father, being hugged and kissed by his mother. The room held no sign at all that another boy lived in the house, too. 
