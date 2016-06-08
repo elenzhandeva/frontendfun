@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Slabo+27px|Indie+Flower|Dancing+Script' rel='stylesheet' type='text/css'>
+	<script src="jquery-2.2.4.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">	
 
 	<title>Front End Fun</title>
@@ -25,7 +26,6 @@
 		}
 	</script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$(".nav-click").click(function(){
@@ -42,27 +42,35 @@
 	</script>
 
 	<script type="text/javascript">
+	//load images into an array-------------
 		var slideImages = new Array();
 		slideImages[0] = new Image();
-		slideImages[0].src = "images/herobgimg.jpg";
 		slideImages[1] = new Image();
-		slideImages[1].src = "images/pic1.jpeg";
 		slideImages[2] = new Image();
 		slideImages[3] = new Image();
 		slideImages[4] = new Image();
-
 		
-		
+		slideImages[0].src = "images/herobgimg.jpg";
+		slideImages[1].src = "images/pic1.jpeg";
 		slideImages[2].src = "images/pic2.jpeg";
 		slideImages[3].src = "images/pic3.jpeg";
 		slideImages[4].src = "images/pic4.jpeg";
-		
+	//---------------------------------------
 		
 		var slideIndex = 1;
-		function slideImage(){
-			if (!document.images){ return; }
+
+		/* slideImage(n): slides panel of pictures in direction n
+			where n = -1 => left, n = 1 => right
+			sets new image src to panels
+		*/
+
+		function slideImage(n){
+			if (!document.images){ return; }	//if images not supported
 			console.log(slideIndex);
-			document.getElementById('slider').src = slideImages[slideIndex].src;
+
+
+
+			document.getElementById('imageA').src = slideImages[slideIndex].src;
 			if (slideIndex<4){ slideIndex += 1; }
 			else { slideIndex = 0; }
 			//setTimeout("slideImage()", 2500);
@@ -129,9 +137,13 @@
 		"Up!" she screeched. Harry heard her walking toward the kitchen and then the sound of the frying pan being put on the stove. He rolled onto his back and tried to remember the dream he had been having. It had been a good one. There had been a flying motorcycle in it. He had a funny feeling he'd had the same dream before. </p>
 	</content>
 	<div class="carousel">
-		<a onclick="slideImage()">
-		<img src="images/herobgimg.jpg" id="slider">
-		</a>
+		<div class="carousel-wrapper" onclick="slideImage()">
+			<ul>
+			<li><img src="images/herobgimg.jpg" id="imageA"></li>
+			<li><img src="images/herobgimg.jpg" id="imageB"></li>
+			<li><img src="images/herobgimg.jpg" id="imageC"></li>
+			</ul>
+		</div>
 	</div>
 	<content class="work">
 		<br>

@@ -8,6 +8,26 @@
 
 	<script src="jquery-2.2.4.min.js"></script>
 	<script type="text/javascript">
+	//load images into an array-------------
+		var slideImages = new Array();
+		slideImages[0] = new Image();
+		slideImages[1] = new Image();
+		slideImages[2] = new Image();
+		slideImages[3] = new Image();
+		slideImages[4] = new Image();
+		
+		slideImages[0].src = "images/herobgimg.jpg";
+		slideImages[1].src = "images/pic1.jpeg";
+		slideImages[2].src = "images/pic2.jpeg";
+		slideImages[3].src = "images/pic3.jpeg";
+		slideImages[4].src = "images/pic4.jpeg";
+	//---------------------------------------
+
+
+
+
+
+
 		var imgIndex = 0;
 		function carousel(n){
 			console.log("INDEX: "+imgIndex);
@@ -20,13 +40,16 @@
 			
 
 			imgIndex += n;
-			var posn = (imgIndex)*-52;
+			var posn = (imgIndex)*-152;
 			console.log(posn);
 			var strposn = posn+"px";
 			console.log(strposn);
 			//document.getElementsByClassName("wrapper")[0].css("position-x", -100px);
 			$(".wrapper").css("left", strposn );
 		}
+
+
+		carousel(0);
 
 	</script>
 </head>
@@ -41,11 +64,9 @@
 <div class="slide">
   <div class="wrapper">
     <ul>
-      <li><div id="A" class="box">1</div></li>
-      <li><div id="B" class="box">2</div></li>
-      <li><div id="C" class="box">3</div></li>
-      <li><div id="D" class="box">4</div></li>
-      <li><div id="E" class="box">5</div></li>
+      <li><img id="A" class="box" src="images/pic4.jpeg"></li>
+      <li><img id="B" class="box" src="images/herobgimg.jpg"></li>
+      <li><img id="C" class="box" src="images/pic1.jpeg"></li>
     </ul>
 
 
