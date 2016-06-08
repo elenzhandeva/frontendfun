@@ -118,9 +118,7 @@ a {
   /* line 29, ../sass/style.scss */
   .my-logo {
     position: fixed;
-    right: 5px;
-    top: 10px;
-    width: 50px;
+    width: 40px;
     transition: transform 2s;
   }
   /* line 57, ../sass/style.scss */
@@ -142,6 +140,7 @@ a {
   position: absolute;
   top: 4px;
   left: 0;
+  z-index: 10;
 }
 /* line 78, ../sass/style.scss */
 .nav-button a {
@@ -174,28 +173,29 @@ a {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  transition: height 1s;
+  transition: height 1s, background-color 1s;
   background-color: rgba(242, 230, 255, 0.5);
+  z-index: 10;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .nav-bar ul {
   width: 100%;
   text-align: center;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .nav-bar li {
   display: block;
   border-bottom: 1px solid white;
   background-color: rgba(242, 230, 255, 0.5);
 }
-/* line 126, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .nav-bar a {
   display: block;
   background-color: rgba(242, 230, 255, 0.5);
   color: black;
   padding: 9px;
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .nav-bar a:hover {
   background-color: rgba(203, 153, 169, 0.8);
   color: white;
@@ -204,41 +204,48 @@ a {
   /* line 95, ../sass/style.scss */
   .nav-bar {
     transition: none;
+    transition: background-color 1s;
     height: 45px;
     position: fixed;
     margin-top: 0;
+    padding-left: 15px;
   }
-  /* line 144, ../sass/style.scss */
+  /* line 147, ../sass/style.scss */
   .nav-bar ul {
     height: 30px;
     margin-top: 14px;
     text-align: left;
     background-color: transparent;
   }
-  /* line 151, ../sass/style.scss */
+  /* line 154, ../sass/style.scss */
   .nav-bar li {
     display: inline;
     background-color: transparent;
   }
-  /* line 156, ../sass/style.scss */
+  /* line 159, ../sass/style.scss */
   .nav-bar a {
     display: inline;
     background-color: transparent;
     padding: 10px;
   }
-  /* line 161, ../sass/style.scss */
+  /* line 164, ../sass/style.scss */
   .nav-bar a:hover {
     background-color: rgba(203, 153, 169, 0.8);
     color: white;
   }
 }
 
-/* line 169, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .nav-bar-show {
   height: 145px;
   background-color: inherit;
   overflow: hidden;
   position: absolute;
+}
+
+/* line 179, ../sass/style.scss */
+.dark {
+  background-color: #e5ccff;
 }
 
 /*.showList {
@@ -271,7 +278,7 @@ a {
     }
   }
 }*/
-/* line 207, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 content {
   display: block;
   clear: both;
@@ -279,7 +286,7 @@ content {
   margin: 10px auto auto auto;
 }
 
-/* line 216, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 .hero-banner {
   display: block;
   width: 100%;
@@ -289,24 +296,23 @@ content {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 226, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .hero-banner img {
   width: inherit;
   height: inherit;
   position: center center;
 }
 
-/* line 235, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .hero-text {
   position: absolute;
   left: 20%;
   top: 50%;
   width: 45%;
   height: auto;
-  border: white solid 1px;
   clear: both;
 }
-/* line 244, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .hero-text h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
@@ -316,7 +322,7 @@ content {
   position: relative;
   float: left;
 }
-/* line 254, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .hero-text h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
@@ -327,40 +333,41 @@ content {
   float: right;
 }
 @media only screen and (min-width: 451px) {
-  /* line 235, ../sass/style.scss */
+  /* line 242, ../sass/style.scss */
   .hero-text {
     width: 205px;
   }
 }
 
-/* line 274, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .carousel {
   width: 100%;
   height: 400px;
   margin-top: 20px;
   overflow: hidden;
 }
-/* line 280, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .carousel ul {
   display: inline;
   list-style: none;
   width: 100%;
 }
-/* line 285, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .carousel li {
   display: inline;
   position: absolute;
   width: 100%;
 }
 
-/* line 297, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .carousel-wrapper {
   height: 400px;
   width: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
-/* line 302, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .box {
   width: 100%;
   height: 400px;
@@ -370,23 +377,23 @@ content {
   transition: left 1s;
 }
 
-/* line 310, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 .right {
   left: 100%;
 }
 
-/* line 313, ../sass/style.scss */
+/* line 320, ../sass/style.scss */
 .show {
   left: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
-/* line 317, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 .left {
   left: -100%;
 }
 
-/* line 321, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .carousel-nav {
   background: grey;
   clear: both;
@@ -395,7 +402,7 @@ content {
   z-index: 10;
 }
 
-/* line 328, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 .carousel-button {
   color: white;
   text-decoration: none;
@@ -403,38 +410,38 @@ content {
   padding: 10px;
   margin: 5px;
 }
-/* line 335, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .carousel-button:hover {
   background-color: white;
   color: darkblue;
 }
 
-/* line 342, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 #prev-button {
   float: left;
 }
 
-/* line 345, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 #next-button {
   float: right;
 }
 
-/* line 350, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 footer {
   background-color: lightblue;
   margin-top: 25px;
 }
 
-/* line 357, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .contact-info ul {
   padding: 10px;
 }
-/* line 360, ../sass/style.scss */
+/* line 366, ../sass/style.scss */
 .contact-info li {
   font-weight: bold;
   text-align: center;
 }
-/* line 364, ../sass/style.scss */
+/* line 370, ../sass/style.scss */
 .contact-info img {
   width: 34px;
   height: 34px;

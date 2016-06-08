@@ -25,6 +25,16 @@
 			document.getElementsByClassName("nav-bar")[0].classList.toggle("nav-bar-show");
 		}
 
+		function scrollNav(){
+			console.log('scrolling');
+			if (document.body.scrollTop >= 400){
+				document.getElementsByClassName("nav-bar")[0].classList.add("dark");
+			}
+			if (document.body.scrollTop < 400){
+				document.getElementsByClassName("nav-bar")[0].classList.remove("dark");
+			}
+		}
+
 		$(document).ready(function(){
 			$(".nav-click").click(function(){
 				//$("#nav-bar ul").hide();
@@ -71,7 +81,7 @@
 </head>
 
 
-<body>
+<body onscroll="scrollNav()">
 	<header>
 
 		<!-- <div class="my-logo">

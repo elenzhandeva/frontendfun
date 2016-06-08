@@ -48,9 +48,9 @@ a {
 
   @media only screen and (min-width: 451px){
     position: fixed;
-    right: 5px;
-    top: 10px;
-    width: 50px;
+    // right: 5px;
+    // top: 10px;
+    width: 40px;
 
     transition: transform 2s;
 
@@ -74,7 +74,7 @@ a {
   position: absolute;
   top: 4px;
   left: 0;
-
+  z-index: 10;
   a {
     color: black;
     background-color: $purple-1;
@@ -103,9 +103,10 @@ a {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  transition: height 1s;
+  transition: height 1s, background-color 1s;
 
   background-color: rgba(242,230,255,0.5);
+  z-index: 10;
 
   // @media only screen and (max-width: 450px){
   //   display: none;
@@ -137,9 +138,11 @@ a {
 
   @media only screen and (min-width: 451px) {
     transition: none;
+    transition: background-color 1s;
     height: 45px;
     position: fixed;
     margin-top: 0;
+    padding-left: 15px;
 
     ul {
       height: 30px;
@@ -166,11 +169,15 @@ a {
   }
 }
 
-.nav-bar-show{
+.nav-bar-show {
   height: 145px;    //SUPER HACKY :/
   background-color: inherit;
   overflow: hidden;
   position: absolute;
+}
+
+.dark {
+  background-color: $purple-1;
 }
 
 /*.showList {
@@ -238,7 +245,6 @@ content {
   top: 50%;
   width: 45%;
   height: auto;
-  border: white solid 1px;
   clear: both;
 
   h1 {
@@ -298,6 +304,7 @@ content {
   height: 400px;
   width: 100%;
   position: absolute;
+  overflow: hidden;
 }
 .box {
   width: 100%;
@@ -312,7 +319,7 @@ content {
 }
 .show {
   left: 0;
-  z-index: 10;
+  z-index: 5;
 }
 .left {
   left: -100%;
@@ -350,7 +357,6 @@ content {
 footer {
   background-color: lightblue;
   margin-top: 25px;
-
 }
 
 .contact-info {
