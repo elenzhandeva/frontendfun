@@ -5,8 +5,7 @@ ul {
 }
 li {
   display: inline;
-  position: relative;
-  float: left;
+  position: absolute;
 }
 
 .wrapper {
@@ -15,10 +14,6 @@ li {
   margin: 5px 0 5px 0;
   padding: 5px 0 5px 0;
   position: absolute;
-  //left: -152px;
-  //transition: left 1s;
-  //border: 1px solid green;
-  //overflow: hidden;
 }
 
 .slide {
@@ -36,20 +31,22 @@ li {
   border: 1px solid black;
   position: relative;
   transition: left 1s;
-  /* display: inline; */
 }
 
-#imageA {
-  left: 0;
-  /*left: -152px;*/
-}
-#imageB {
-  left: 0;
-}
-#imageC {
-  left: 0;
+.right {
+  position: absolute;
+  left: 112px;
 }
 
+.show {
+  position: absolute;
+  left: -40px;
+}
+
+.left {
+  position: absolute;
+  left: -192px;
+}
 
 .carousel-nav {
   background: grey;

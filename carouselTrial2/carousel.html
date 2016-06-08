@@ -29,15 +29,41 @@
 
 
 		var imgIndex = 0;
-		function carousel(n){
-			console.log("INDEX: "+imgIndex);
-			if (imgIndex < 0){
-				console.log("<0");
-			}
-			else if (imgIndex >3){
-				console.log(">3");
+		// function carousel(n){
+		// 	if (!document.images) { return; }
+		// 	if (imgIndex < 0 || imgIndex >3){
+		// 		console.log("out of range");
+		// 		//return;
+		// 	}
+			
+		// 	console.log("INDEX: "+imgIndex);
+
+
+
+
+		// 	imgIndex += n;
+		// 	var posn = (imgIndex)*-152;
+		// 	console.log(posn);
+		// 	var strposn = posn+"px";
+		// 	console.log(strposn);
+		// 	//document.getElementsByClassName("wrapper")[0].css("position-x", -100px);
+		// 	$("#imageA").css("left", strposn );
+		// 	$("#imageB").css("left", strposn );
+		// 	$("#imageC").css("left", strposn );
+		// }
+
+
+		function carouselR(n){
+			if (!document.images) { return; }
+			if (imgIndex <= 0 || imgIndex >=3){
+				console.log("out of range");
+				//return;
 			}
 			
+			console.log("INDEX: "+imgIndex);
+
+
+
 
 			imgIndex += n;
 			var posn = (imgIndex)*-152;
@@ -45,11 +71,33 @@
 			var strposn = posn+"px";
 			console.log(strposn);
 			//document.getElementsByClassName("wrapper")[0].css("position-x", -100px);
-			$(".wrapper").css("left", strposn );
+			$("#imageA").css("left", strposn );
+			$("#imageB").css("left", strposn );
+			// $("#imageC").css("left", strposn );
+
+			console.log(document.getElementById("imageA").src);
+			setTimeout(changeImages(), 5000);
+
+
+			// $("#imageA").src = $("#imageB").src;
+			// $("#imageB").src = $("#imageC").src;
+			// $("#imageC").src = slideImages[imgIndex].src;
+
+		}
+		function changeImages(){
+			var leftIndex = imgIndex<=0 ? 4 : imgIndex-1;
+			var rightIndex = imgIndex>=4 ? 0 : imgIndex+1;
+			console.log(leftIndex +":"+ imgIndex +":"+ rightIndex);
+			document.getElementById("imageA").src = document.getElementById("imageB").src;
+			console.log("error1");
+			document.getElementById("imageB").src = document.getElementById("imageC");
+			console.log("error2");
+			// document.getElementById("imageC").src = slideImages[imgIndex].src;
+
+			// console.log("error3");
 		}
 
-
-		carousel(0);
+		//carouselR(0);
 
 	</script>
 </head>
@@ -64,17 +112,17 @@
 <div class="slide">
   <div class="wrapper">
     <ul>
-      <li><img id="A" class="box" src="images/pic4.jpeg"></li>
-      <li><img id="B" class="box" src="images/herobgimg.jpg"></li>
-      <li><img id="C" class="box" src="images/pic1.jpeg"></li>
+      <li><img id="imageA" class="box" src="images/pic4.jpeg" alt="A"></li>
+      <li><img id="imageB" class="box" src="images/herobgimg.jpg" alt="B"></li>
+      <!-- <li><img id="imageC" class="box" src="images/pic1.jpeg"></li> -->
     </ul>
 
 
   </div>
 
 <div class="carousel-nav">
-	<button id="prev" onclick="carousel(-1)"> < </button>
-	<button id="next" onclick="carousel(1)"> > </button>
+	<button id="prev" onclick="carouselR(-1)"> < </button>
+	<button id="next" onclick="carouselR(1)"> > </button>
 </div>
 </div>
 
