@@ -274,8 +274,7 @@ content {
 .carousel {
   width: 100%;
   height: 400px;
-  left: 0;
-  border: 1px solid red;
+  margin-top: 20px;
   overflow: hidden;
 
   ul {
@@ -299,7 +298,6 @@ content {
   height: 400px;
   width: 100%;
   position: absolute;
-  left: 2px;
 }
 .box {
   width: 100%;
@@ -324,8 +322,22 @@ content {
   background: grey;
   clear: both;
   position: relative;
-  top: 170px;
+  top: 180px;
   z-index: 10;
+}
+.carousel-button {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+
+  &:hover {
+    background-color: white;
+    color: darkblue;
+
+  }
+
 }
 #prev-button {
   float: left;
@@ -348,7 +360,10 @@ footer {
   li {
     font-weight: bold;
     text-align: center;
-
+  }
+  img {
+    width: 34px;
+    height: 34px;
   }
 }
 

@@ -38,7 +38,7 @@
 		// });
 
 
-
+	//CAROUSEL SCRIPT --------------------------------------------------
 		var imgIndex = 0;
 		var imgArray = document.getElementsByClassName("box");
 		var imgNum = imgArray.length;
@@ -64,8 +64,8 @@
 			imgArray[imgIndex].classList.add("show");
 			imgArray[(imgIndex<=0 ? 4 : imgIndex-1)].classList.add("left");
 			imgArray[(imgIndex>=4 ? 0 : imgIndex+1)].classList.add("right");
-
 		}
+	//-------------------------------------------------------------------
 
 	</script>
 </head>
@@ -140,8 +140,8 @@
 			</ul>
 		</div>
 		<div class="carousel-nav">
-			<button id="prev-button" onclick="shiftCarousel(-1)"> < </button>
-			<button id="next-button" onclick="shiftCarousel(1)"> > </button>
+			<a id="prev-button" class="carousel-button" onclick="shiftCarousel(-1)"> < </a>
+			<a id="next-button" class="carousel-button" onclick="shiftCarousel(1)"> > </a>
 		</div>
 	</div>
 
@@ -167,7 +167,7 @@
 <footer>
 	<div class="contact-info">
 		<ul>
-			<li>EMAIL</li>
+			<li><img class="contact-icon" src="images/email.png"> EMAIL</li>
 			<li>GitHub</li>
 			<li>LinkedIn</li>
 			<li>Facebook</li>

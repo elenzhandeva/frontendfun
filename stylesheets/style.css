@@ -337,32 +337,30 @@ content {
 .carousel {
   width: 100%;
   height: 400px;
-  left: 0;
-  border: 1px solid red;
+  margin-top: 20px;
   overflow: hidden;
 }
-/* line 281, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .carousel ul {
   display: inline;
   list-style: none;
   width: 100%;
 }
-/* line 286, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .carousel li {
   display: inline;
   position: absolute;
   width: 100%;
 }
 
-/* line 298, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .carousel-wrapper {
   height: 400px;
   width: 100%;
   position: absolute;
-  left: 2px;
 }
 
-/* line 304, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .box {
   width: 100%;
   height: 400px;
@@ -372,53 +370,72 @@ content {
   transition: left 1s;
 }
 
-/* line 312, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 .right {
   left: 100%;
 }
 
-/* line 315, ../sass/style.scss */
+/* line 313, ../sass/style.scss */
 .show {
   left: 0;
   z-index: 10;
 }
 
-/* line 319, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 .left {
   left: -100%;
 }
 
-/* line 323, ../sass/style.scss */
+/* line 321, ../sass/style.scss */
 .carousel-nav {
   background: grey;
   clear: both;
   position: relative;
-  top: 170px;
+  top: 180px;
   z-index: 10;
 }
 
-/* line 330, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
+.carousel-button {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+}
+/* line 335, ../sass/style.scss */
+.carousel-button:hover {
+  background-color: white;
+  color: darkblue;
+}
+
+/* line 342, ../sass/style.scss */
 #prev-button {
   float: left;
 }
 
-/* line 333, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 #next-button {
   float: right;
 }
 
-/* line 338, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 footer {
   background-color: lightblue;
   margin-top: 25px;
 }
 
-/* line 345, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 .contact-info ul {
   padding: 10px;
 }
-/* line 348, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .contact-info li {
   font-weight: bold;
   text-align: center;
+}
+/* line 364, ../sass/style.scss */
+.contact-info img {
+  width: 34px;
+  height: 34px;
 }
