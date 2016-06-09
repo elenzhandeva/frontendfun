@@ -15,12 +15,19 @@ function showNav(){
 
 function scrollNav(){
 	console.log('scrolling');
+	var topheight = $('.hero').height()- (2* $('.nav-bar').height());
 	if (document.body.scrollTop >= 400){
 		document.getElementsByClassName("nav-bar")[0].classList.add("dark");
 	}
 	if (document.body.scrollTop < 400){
 		document.getElementsByClassName("nav-bar")[0].classList.remove("dark");
 	}
+}
+
+function scrollTo(){
+	console.log('Jump to: work');
+	$('body').animate({
+		scrollTop: $('.work').offset().top - $('.nav-bar').height()}, 500);
 }
 
 $(document).ready(function(){

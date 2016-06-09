@@ -323,6 +323,8 @@ content {
   display: inline;
   text-align: center;
   position: relative; }
+  .col p {
+    margin: 5px; }
 
 .col-one-third {
   width: 33%;
@@ -347,7 +349,35 @@ content {
   .col-container {
     height: 1000px; } }
 
+.alt-display {
+  clear: both; }
+
+.showcase {
+  width: 100%;
+  height: 170px;
+  display: inline; }
+  .showcase img {
+    width: 100%; }
+  .showcase p {
+    text-align: justify;
+    padding: 10px; }
+
+@media only screen and (min-width: 451px) {
+  .showcase {
+    display: block; }
+    .showcase img {
+      width: 30%;
+      float: left; }
+    .showcase p {
+      width: 70%;
+      float: right; }
+  .showcase-right img {
+    float: right; }
+  .showcase-right p {
+    float: left; } }
+
 footer {
+  width: 100%;
   background-color: lightblue;
   margin-top: 25px; }
 
