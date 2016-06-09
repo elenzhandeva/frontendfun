@@ -1,0 +1,26 @@
+{
+  "name": "frontendfun",
+  "version": "1.0.0",
+  "description": "trying out front end stuff",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenzhandeva/frontendfun.git"
+  },
+  "author": "Elena Zhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elenzhandeva/frontendfun/issues"
+  },
+  "homepage": "https://github.com/elenzhandeva/frontendfun#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0"
+  }
+}

@@ -1,0 +1,62 @@
+########pulled from nascent website
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.scc
+
+
+
+
+# Others
+sql/
+*.Cache
+
+# Mac crap
+.DS_Store
+
+
+#############
+## Other
+#############
+
+# Any node stuff
+node_modules/*
+
+.sass-cache
+.sass-cache/**/style.scssc
+css.map
+.ftpconfig
+stylesheets/style.css.map
