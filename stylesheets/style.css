@@ -313,11 +313,13 @@ content {
   float: right; }
 
 .work {
-  width: 80%; }
+  width: 80%;
+  overflow: hidden; }
 
 .col-container {
   clear: both;
-  height: 500px; }
+  margin-top: 20px;
+  overflow: hidden; }
 
 .col {
   display: inline;
@@ -345,26 +347,28 @@ content {
 @media only screen and (max-width: 450px) {
   .col {
     width: 100%;
-    float: left; }
-  .col-container {
-    height: 1000px; } }
+    float: left; } }
 
 .alt-display {
-  clear: both; }
+  clear: both;
+  padding: 20px;
+  overflow: hidden; }
 
 .showcase {
+  clear: both;
   width: 100%;
-  height: 170px;
   display: inline; }
   .showcase img {
     width: 100%; }
   .showcase p {
     text-align: justify;
-    padding: 10px; }
+    padding: 0 10px 0 10px; }
 
 @media only screen and (min-width: 451px) {
   .showcase {
-    display: block; }
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px; }
     .showcase img {
       width: 30%;
       float: left; }
@@ -377,9 +381,9 @@ content {
     float: left; } }
 
 footer {
+  clear: both;
   width: 100%;
-  background-color: lightblue;
-  margin-top: 25px; }
+  background-color: lightblue; }
 
 .contact-info ul {
   padding: 10px; }
