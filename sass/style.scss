@@ -26,6 +26,8 @@ a {
 //   height: 100%;
 // }
 
+
+//HEADER -------------------------------------------
 .my-logo {
   
   border-radius: 50%;
@@ -179,7 +181,7 @@ a {
 .dark {
   background-color: $purple-1;
 }
-
+//--------------------------------------------------
 /*.showList {
   display: block;
   background-color: lightgreen;
@@ -276,7 +278,7 @@ content {
 
 
 
-
+//CAROUSEL -----------------------------------------
 .carousel {
   width: 100%;
   height: 400px;
@@ -352,6 +354,50 @@ content {
 #next-button {
   float: right;
 }
+//--------------------------------------------------
+
+.work {
+  width: 80%;
+}
+.col-container {
+  clear: both;
+  height: 500px;
+}
+
+.col {
+  display: inline;
+  text-align: center;
+  position: relative;
+}
+
+.col-one-third {
+  width: 33%;
+  float: right;
+}
+.col-two-third {
+  width: 67%;
+  float: left;
+}
+.col-one-half {
+  width: 50%;
+  float: left;
+}
+.col-two-half {
+  width: 50%;
+  float: right;
+}
+
+@media only screen and (max-width: 450px) {
+  .col{
+    width: 100%;
+    float: left;
+  }
+  .col-container {
+    height: 1000px;
+  }
+}
+
+
 
 
 footer {
