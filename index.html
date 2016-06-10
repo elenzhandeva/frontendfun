@@ -10,7 +10,8 @@
 
 	<title>Front End Fun</title>
 
-	<script src="main.min.js"></script>
+	<script src="vendors/hammer.min.js"></script>
+	<script src="main.js"></script>
 </head>
 
 
@@ -23,10 +24,10 @@
 	
 		<nav id="nav-bar" class="nav-bar">
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a onclick="scrollTo()">Experience</a></li>
-				<li><a href="/">About</a></li>
-				<li><a href="/">Other</a></li>
+				<li><a onclick="scrollTo('.hero')">Home</a></li>
+				<li><a onclick="scrollTo('.work')">Section1</a></li>
+				<li><a onclick="scrollTo('.carousel')">Carousel</a></li>
+				<li><a onclick="scrollTo('.alt-display')">Columns</a></li>
 			</ul>
 		</nav>
 
@@ -45,8 +46,8 @@
 	<section class="hero">
 		<div class="hero-banner">
 			<div class="hero-text">
-				<h1>Elena</h1>
-				<h2>Zhan</h2>
+				<h1>Hero</h1>
+				<h2>Banner</h2>
 			</div>
 			<!-- <img class="hero-banner" src="images/herobgimg.jpg" alt="HERO BANNER"> -->
 		</div>

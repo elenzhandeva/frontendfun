@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-postcss');
 
 
 	grunt.initConfig({
@@ -30,6 +31,19 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		
+
+		postcss: {
+			options: {
+				map: true,
+				processors: [
+				require('autoprefixer')({browsers: '>1%'})
+				]
+			},
+			dist: {
+				src: 'stylesheets/style.css'
+			}
+		},
 
 		watch: {
 			sass: {
@@ -47,7 +61,7 @@ module.exports = function(grunt) {
 
 	});
 
-	grunt.registerTask('default', ['uglify', 'sass', 'watch']);
+	grunt.registerTask('default', ['uglify', 'sass', 'postcss', 'watch']);
 
 
 };

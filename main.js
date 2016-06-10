@@ -24,10 +24,10 @@ function scrollNav(){
 	}
 }
 
-function scrollTo(){
-	console.log('Jump to: work');
+function scrollTo(toSection){
+	console.log('Jump to: '+toSection);
 	$('body').animate({
-		scrollTop: $('.work').offset().top - $('.nav-bar').height()}, 500);
+		scrollTop: $(toSection).offset().top - $('.nav-bar').height()}, 500);
 }
 
 $(document).ready(function(){
@@ -66,8 +66,33 @@ function shiftCarousel(n){
 		$(".right").css("z-index",(1*n)+"");
 		document.getElementsByClassName("right")[0].classList.remove("right");
 	}
+	console.log("index: "+imgIndex);
+	console.log("img: "+imgArray[imgIndex]);
 	imgArray[imgIndex].classList.add("show");
 	imgArray[(imgIndex<=0 ? 4 : imgIndex-1)].classList.add("left");
 	imgArray[(imgIndex>=4 ? 0 : imgIndex+1)].classList.add("right");
 }
 //-------------------------------------------------------------------
+
+//HAMMER -------------
+
+// var mc = new Hammer(document.getElementsByClassName('carousel')[0]);
+// mc.on("panleft", function(){console.log("PANNING LEFT")});
+// mc.on("panright", shiftCarousel(-1));
+
+//JQUERY SWIPE
+$(document).ready(function(){
+	console.log("page created");
+	$(".box").on("swipeleft", function(){
+		console.log("shifting");
+		shiftCarousel(1);
+	});
+});
+// $(".carousel").on("swiperight", shiftCarousel(-1));
+
+
+
+
+
+
+
