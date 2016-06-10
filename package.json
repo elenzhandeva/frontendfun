@@ -1,26 +1,25 @@
 {
-  "name": "frontendfun",
-  "version": "1.0.0",
-  "description": "trying out front end stuff",
-  "main": "gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elenzhandeva/frontendfun.git"
-  },
-  "author": "Elena Zhan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elenzhandeva/frontendfun/issues"
-  },
-  "homepage": "https://github.com/elenzhandeva/frontendfun#readme",
+  "name": "nascent-frontend-toolkit",
+  "description": "Nascent Front-end Toolkit",
+  "version": "0.2.0",
+  "private": true,
+  "author": "Nascent",
+  "license": "MIT",
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^1.2.0"
-  }
+    "autoprefixer": "^6.3.3",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-scss-lint": "^0.3.9",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "node-sass": "^3.2.0",
+    "run-sequence": "^1.1.5"
+  },
+  "dependencies": {}
 }

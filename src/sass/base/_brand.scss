@@ -1,0 +1,52 @@
+
+/*------------------------------------*\
+    Brand styles
+\*------------------------------------*/
+
+/*
+ * All styling related to your awesome brand
+ *
+ * Includes:
+ * Brand Color Manifest
+ * Color Map Function
+ */
+
+
+// ---------- Nascent Color Manifest ---------
+
+$color-map: (
+  'white':                    #FFF,
+  'white-off':                #F3F3F3,
+  'grey-lighter':             #E8E8E8,
+  'grey-light':               #D6D6D6,
+  'grey':                     #999,
+  'grey-dark':                #545454,
+  'black':                    #232323,
+
+  'nascent-blue':             #00AED6,
+  'navy-grey':                #3D515A,
+  'sheet-grey':               #EDEDEB,
+  'slate-grey':               #C7CDCD,
+
+  'icon-blue':                #28D6FF,
+  'teal':                     #139DA7,
+  'orange':                   #57A708,
+  'red':                      #D14647,
+);
+
+
+
+// ---------- Color Map Function ---------
+// Function that allows you to pull from the color map
+// Usage: border-color: color('purple-light');
+
+@function color($color) {
+  @if map-has-key($color-map, $color) {
+    @return map-get($color-map, $color);
+  } @else {
+    // Throw error if color string is not in the map
+    @error 'You have entered `#{$color}`, which is a color that doesn\'t exist. '
+      + 'Please make sure it is defined in `$color-map` map.';
+    @return '';
+  }
+}

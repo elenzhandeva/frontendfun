@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'reset';
-@import 'typography';
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
 
 body {
   background-color: $purple-0;
@@ -12,7 +12,6 @@ body {
 
 a {
   text-decoration: none;
-
 }
 
 
@@ -29,7 +28,6 @@ a {
 
 //HEADER -------------------------------------------
 .my-logo {
-  
   border-radius: 50%;
   width: 32px;
   height: auto;
@@ -40,7 +38,8 @@ a {
 
   @media only screen and (max-width: 450px){
     transition: width 1s;
-    &:hover{
+
+    &:hover {
       box-shadow: 0 0 15px 15px rgba(255, 255, 204, 0.4);
     }
   }
@@ -53,21 +52,17 @@ a {
     // right: 5px;
     // top: 10px;
     width: 40px;
-
     transition: transform 2s;
 
-    &:hover{
+    &:hover {
       transform: rotate(-360deg);
-      
     }
-
   }
-  
 }
 
-.my-logo-click{
+.my-logo-click {
   @media only screen and (max-width: 450px){
-    width: 50%
+    width: 50%;
   }
 }
 
@@ -77,12 +72,14 @@ a {
   top: 4px;
   left: 0;
   z-index: 10;
+
   a {
     color: black;
     background-color: $purple-1;
-    padding: 0px 5px 0 5px;
+    padding: 0 5px 0 5px;
     font-size: 28px;
     border: 1px solid white;
+
     &:hover {
       color: white;
       background-color: darken($purple-1, 10%);
@@ -95,7 +92,6 @@ a {
 }
 
 .nav-bar {
-
   display: block;
   overflow: hidden;
   height: 0;
@@ -107,7 +103,7 @@ a {
   margin-bottom: 0;
   transition: height 1s, background-color 1s;
 
-  background-color: rgba(242,230,255,0.5);
+  background-color: rgba(242, 230, 255, 0.5);
   z-index: 10;
 
   // @media only screen and (max-width: 450px){
@@ -123,7 +119,7 @@ a {
     display: block;
     border-bottom: 1px solid white;
     //background-color: $purple-1;
-    background-color: rgba(242,230,255,0.5);
+    background-color: rgba(242, 230, 255, 0.5);
   }
 
   a {
@@ -132,6 +128,7 @@ a {
     background-color: rgba(242, 230, 255, 0.5);
     color: black;
     padding: 9px;
+
     &:hover {
       background-color: rgba(203, 153, 169, 0.8);
       color: white;
@@ -163,8 +160,9 @@ a {
       // background-color: $purple-1;
       background-color: transparent;
       padding: 10px;
+
       &:hover {
-        background-color:  rgba(203, 153, 169, 0.8);
+        background-color: rgba(203, 153, 169, 0.8);
         color: white;
       }
     }
@@ -217,9 +215,8 @@ content {
   display: block;
   //position: absolute;
   clear: both;
-  width:70%;
+  width: 70%;
   margin: 10px auto auto auto;
-
 }
 
 .hero-banner {
@@ -227,12 +224,11 @@ content {
   width: 100%;
   height: 500px;
   background-color: lightgrey;
-  background-image: url("../images/herobgimg.jpg");
+  background-image: url('../../images/herobgimg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
-
-  img{
+  img {
     width: inherit;
     height: inherit;
     position: center center;
@@ -290,6 +286,7 @@ content {
     list-style: none;
     width: 100%;
   }
+
   li {
     display: inline;
     position: absolute;
@@ -308,6 +305,7 @@ content {
   position: absolute;
   overflow: hidden;
 }
+
 .box {
   width: 100%;
   height: 400px;
@@ -316,13 +314,16 @@ content {
   left: 112px;
   transition: left 1s;
 }
+
 .right {
   left: 100%;
 }
+
 .show {
   left: 0;
   z-index: 5;
 }
+
 .left {
   left: -100%;
 }
@@ -334,6 +335,7 @@ content {
   top: 180px;
   z-index: 10;
 }
+
 .carousel-button {
   color: white;
   text-decoration: none;
@@ -348,9 +350,11 @@ content {
   }
 
 }
+
 #prev-button {
   float: left;
 }
+
 #next-button {
   float: right;
 }
@@ -360,6 +364,7 @@ content {
   width: 80%;
   overflow: hidden;   //why the frig?
 }
+
 .col-container {
   clear: both;
   margin-top: 20px;
@@ -371,6 +376,7 @@ content {
   display: inline;
   text-align: center;
   position: relative;
+
   p {
     margin: 5px;
   }
@@ -380,24 +386,28 @@ content {
   width: 33%;
   float: right;
 }
+
 .col-two-third {
   width: 67%;
   float: left;
 }
+
 .col-one-half {
   width: 50%;
   float: left;
 }
+
 .col-two-half {
   width: 50%;
   float: right;
 }
 
 @media only screen and (max-width: 450px) {
-  .col{
+  .col {
     width: 100%;
     float: left;
   }
+
   .col-container {
     // height: 1000px;
   }
@@ -432,19 +442,23 @@ content {
     display: block;
     overflow: hidden;
     margin-bottom: 10px;
+
     img {
       width: 30%;
       float: left;
     }
+
     p {
       width: 70%;
       float: right;
     }
   }
+
   .showcase-right {
     img {
       float: right;
     }
+
     p {
       float: left;
     }
@@ -460,13 +474,15 @@ footer {
 }
 
 .contact-info {
-  ul{
+  ul {
     padding: 10px;
   }
+
   li {
     font-weight: bold;
     text-align: center;
   }
+
   img {
     width: 34px;
     height: 34px;
