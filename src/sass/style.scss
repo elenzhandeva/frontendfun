@@ -242,7 +242,7 @@ content {
 .hero-text {
   position: absolute;
   left: 20%;
-  top: 50%;
+  top: 40%;
   width: 45%;
   height: auto;
   clear: both;
@@ -451,7 +451,7 @@ content {
 
   p {
     text-align: justify;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
   }
 
 }
@@ -485,6 +485,75 @@ content {
 }
 
 
+.neat-showcase {
+  @include outer-container(100%);
+  margin-top: 10px;
+
+  img {
+    @include span-columns(12);
+
+    @include media(min-width 451px) {
+      @include span-columns(4);
+    }
+  }
+
+  p {
+    @include span-columns(12);
+    padding: 5% 0;
+    @include media(min-width 451px) {
+      @include span-columns(8);
+    }
+  }
+}
+
+.flex-container {
+  display: block;
+  margin-top: 10px;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+  p {
+    width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 451px) {
+  .flex-container {
+    display: flex;
+
+    img {
+      width: 30%;
+      float: left;
+      // align-self: center;
+    }
+
+    p {
+      width: 70%;
+      float: right;
+      // align-self: center;
+    }
+  }
+
+  .flex-container-right {
+    img {
+      float: right;
+    }
+    p {
+      float: left;
+      order: -1;
+    }
+  }
+}
+
+
+
+
+
+
+//--------------------------------------
 
 footer {
   clear: both;
