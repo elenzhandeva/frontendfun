@@ -1,3 +1,5 @@
+@import 'utils/bourbon/bourbon';
+@import 'utils/neat/neat';
 @import 'base/variables';
 @import 'base/reset';
 @import 'base/typography';
@@ -321,7 +323,7 @@ content {
 
 .show {
   left: 0;
-  z-index: 5;
+  z-index: 4;
 }
 
 .left {
@@ -333,7 +335,7 @@ content {
   clear: both;
   position: relative;
   top: 180px;
-  z-index: 10;
+  z-index: 5;
 }
 
 .carousel-button {
@@ -372,7 +374,7 @@ content {
   overflow: hidden;   //why the frig?
 }
 
-.col {
+.my-col {
   display: inline;
   text-align: center;
   position: relative;
@@ -403,7 +405,7 @@ content {
 }
 
 @media only screen and (max-width: 450px) {
-  .col {
+  .my-col {
     width: 100%;
     float: left;
   }
@@ -412,6 +414,23 @@ content {
     // height: 1000px;
   }
 }
+
+//Bourbon Neat grid system
+.neat-container {
+  @include outer-container(80%);
+  .one-third {
+    @include span-columns(12);
+
+    @include media(min-width 451px){
+      @include span-columns(4);
+    }
+
+  }
+}
+.col {
+  text-align: center;
+}
+
 //--------------------------------------------------
 
 .alt-display {
